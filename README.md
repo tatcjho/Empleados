@@ -4,3 +4,5 @@ La siguiente app fue desarrollada en Ionic, misma que permite el registro de emp
 
 ## Resultados
 
+![alt text](1.PNG)
+
