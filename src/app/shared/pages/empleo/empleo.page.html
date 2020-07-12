@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Empleo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="(empleo | async) as empleo">
+  <ion-card>
+    <img [src]="empleo.image.url">
+   
+    
+    <ion-content>
+    
+      <ion-item lines="full">
+        <ion-label position="floating">Titulo</ion-label>
+        <ion-input required [(ngModel)]="empleo.titulo"></ion-input>
+      </ion-item>
+    
+      <ion-item lines="full">
+        <ion-label position="floating">Descripcion</ion-label>
+        <ion-input [(ngModel)]="empleo.descripcion"></ion-input>
+      </ion-item>
+    
+      <ion-item lines="full">
+        <ion-label position="floating">Salario</ion-label>
+        <ion-input required [(ngModel)]="empleo.salario"></ion-input>
+      </ion-item>
+  
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="danger" expand="block" (click)="guardarEmpleo()" >Guardar</ion-button>
+        </ion-col>
+      </ion-row>
+   
+    </ion-content>
+
+
+
+
+
+
+
+    <ion-card-header>
+      <ion-card-title>Empleo</ion-card-title>
+      <ion-card-subtitle>{{empleo.titulo}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{empleo.descripcion}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

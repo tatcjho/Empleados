@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de empleos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>Empleos</h2>
+  
+   
+    <ion-list>
+      <ion-item *ngFor="let empleo of empleados | async; trackBy: trackByFn">
+        <ion-avatar slot="start">
+          <img src="../../../../assets/img/avatar.jpg">
+        </ion-avatar>
+        <ion-label (click)="showEmpleo(empleo.uid)">
+            <h2>{{empleo.titulo}}</h2>
+            <p> {{empleo.descripcion}}</p>
+            <p>{{empleo.salario}}</p>
+            <p>{{empleo.iess}}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-fab vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="showCrearEmpleo()">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-list>
+    
+    <h2>Empleos con IESS</h2>
+    <ion-list>
+      <ion-item *ngFor="let empleo of empleados2">
+        <ion-avatar slot="start">
+          <img src="../../../../assets/img/avatar.jpg">
+        </ion-avatar>
+        <ion-label (click)="showEmpleo(empleo.uid)">
+            <h2>{{empleo.titulo}}</h2>
+            <p> {{empleo.descripcion}}</p>
+            <p>{{empleo.salario}}</p>
+            <p>{{empleo.iess}}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-fab vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="showCrearEmpleo()">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-list>
+    
+
+
+
+  <h2>Empleos</h2>
+
+  <h1>Cosas</h1>
+  <div *ngFor="let cosa of cosas">
+
+    <ion-list>
+      <ion-item>
+        <ion-label>
+         <h3> {{cosa.id}}</h3>
+         <p> {{cosa.nombre}}</p>
+        </ion-label>
+      </ion-item>
+      </ion-list>
+  </div>
+
+  <div>
+    
+    <ion-fab vertical="top" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="showCrearEmpleo()">
+        <ion-icon name="pencil"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+
+
+</ion-content>
