@@ -6,6 +6,7 @@ La siguiente app fue desarrollada en Ionic, misma que permite el registro de emp
 
 Imagen 1:
 Descripcion: Registro de empleo en la app
+
 ![Registro de empleo](1.PNG)
 
 Imagen 2:
