@@ -46,7 +46,26 @@
     </ion-card-header>
   
     <ion-card-content>
+      <ion-label position="floating">Descripcion:</ion-label>
       {{empleo.descripcion}}
     </ion-card-content>
+    
+    <ion-card-content>
+      <ion-label position="floating">Salario:</ion-label>
+      {{empleo.salario}}
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block" (click)="guardarEmpleo()" >Abrir PDF</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block" (click)="guardarEmpleo()" >Descargar y abrir PDF</ion-button>
+      </ion-col>
+    </ion-row>
+  
   </ion-card>
 </ion-content>
