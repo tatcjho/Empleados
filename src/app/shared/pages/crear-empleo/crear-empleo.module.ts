@@ -10,6 +10,7 @@ import { CrearEmpleoPage } from './crear-empleo.page';
 import { ImageUploadComponent } from 'src/app/components/image-upload/image-upload.component';
 import { TestcomponentComponent } from 'src/app/componentes/testcomponent/testcomponent.component';
 
+
 @NgModule({
   imports: [
     CommonModule,

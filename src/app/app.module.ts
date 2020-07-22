@@ -15,12 +15,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
 import { Camera} from '@ionic-native/camera/ngx';
 
-//Plugins para pdfGenerator 
-import { File } from '@ionic-native/File/ngx';
-import { FileOpener } from '@ionic-native/file-opener/ngx';
-import {FileTransfer} from '@ionic-native/file-transfer/ngx'
-import {DocumentViewer} from '@ionic-native/document-viewer/ngx'
-
+import { FileChooser} from '@ionic-native/file-chooser/ngx'
+import {FilePath  } from "@ionic-native/file-path/ngx";
 
 @NgModule({
   declarations: [AppComponent],
@@ -38,11 +34,10 @@ import {DocumentViewer} from '@ionic-native/document-viewer/ngx'
     StatusBar,
     SplashScreen,
     Camera,
+    FileChooser,
+    FilePath,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
-    File,
-    FileOpener,
-    FileTransfer,
-    DocumentViewer
+    
   ],
   bootstrap: [AppComponent]
 })

@@ -26,9 +26,16 @@
 
     <ion-item>
       <app-image-upload [icon]="'camera'" [type]="'camera'" (uploadFinished)="imagenCargada($event)"></app-image-upload>
-    
-    <app-testcomponent [icon]="icono" (finish)="saludar($event)"></app-testcomponent>
+      
+      
+      <app-testcomponent [icon]="icono" (finish)="saludar($event)"></app-testcomponent>
 
+
+
+     <ion-button (click)="openChooser()">Escoger Archivo</ion-button>
+      <img [src]="currentFile"/>
+  
+     
      <ion-button type="button" (click)="tomarFoto()">Tomar Foto</ion-button>
      <img [src]="base64Image"/>
     </ion-item>

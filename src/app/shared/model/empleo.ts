@@ -5,5 +5,7 @@ export class Empleo{
     salario:number;
     numero: number;
     image: {};
+    file: {}
+   
 
 }
