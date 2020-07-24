@@ -38,13 +38,13 @@ Este plugin permite seleccionar archivos desde la carpeta de archivos que se enc
 ## Instalación:
 
 ### Instalación en cordova:
-ionic cordova plugin add cordova-plugin-chooser
-npm install @ionic-native/chooser
+        ionic cordova plugin add cordova-plugin-chooser
+        npm install @ionic-native/chooser
 
 ### Instalación en capacitor
-npm install cordova-plugin-chooser
-npm install @ionic-native/chooser
-ionic cap sync
+        npm install cordova-plugin-chooser
+        npm install @ionic-native/chooser
+        ionic cap sync
 
 En nuestro caso vamos a utilizar la instalación del capacitor. Posterior a esta instalación lo que debemos realizar es la importación de librerías dentro del app module, además dentro de los providers como se presenta a continuación:
 
@@ -125,19 +125,19 @@ Para la demostración de la implementación del componente con el plugin Chooser
 1) Implementar el componente dentro de la pagina.module.ts, en nuestro caso seria "crear-pagina.module.ts":
 Lo que hago en esta seccion es llamar al componente creado denominado FileChooserComponent y ademas declararlo como se puede observar a continuación en las presentes lineas de código:
 
-    import {FileChooserComponent} from 'src/app/components/file-chooser/file-chooser.component';
-    @NgModule({
-      imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        CrearEmpleoPageRoutingModule
-      ],
-      declarations: [CrearEmpleoPage, ImageUploadComponent, TestcomponentComponent,FileChooserComponent],
-      exports: [ImageUploadComponent, TestcomponentComponent,FileChooserComponent]
+                            import {FileChooserComponent} from 'src/app/components/file-chooser/file-chooser.component';
+                            @NgModule({
+                              imports: [
+                                CommonModule,
+                                FormsModule,
+                                IonicModule,
+                                CrearEmpleoPageRoutingModule
+                              ],
+                              declarations: [CrearEmpleoPage, ImageUploadComponent, TestcomponentComponent,FileChooserComponent],
+                              exports: [ImageUploadComponent, TestcomponentComponent,FileChooserComponent]
 
-    })
-    export class CrearEmpleoPageModule {}
+                            })
+                            export class CrearEmpleoPageModule {}
 
 2) Llamar al componente en el html de la página:
 A continuación dentro del html de crear-empleo.page.html vamos a llamar a nuestro componente como muestra la siguiente linea de código:
