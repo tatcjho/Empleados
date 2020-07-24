@@ -145,7 +145,7 @@ A continuación dentro del html de crear-empleo.page.html vamos a llamar a nuest
 
 Resultados:
 
-![Seleccionar archivo](3.PNG)
+![Seleccionar archivo](12.PNG)
 
-![Archivo seleccionado](3.PNG)
+![Archivo seleccionado](13.PNG)
 
