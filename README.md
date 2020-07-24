@@ -51,16 +51,16 @@ En nuestro caso vamos a utilizar la instalación del capacitor. Posterior a esta
 
 ##Importación de API en el archivo app.modules.ts
 
-import { FileChooser} from '@ionic-native/file-chooser/ngx'
-providers: [
-    StatusBar,
-    SplashScreen,
-    Camera,
-    FileChooser,
-   
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
-    
-  ],
+        import { FileChooser} from '@ionic-native/file-chooser/ngx'
+        providers: [
+            StatusBar,
+            SplashScreen,
+            Camera,
+            FileChooser,
+
+            { provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
+
+          ],
   
 ## Generación del componente
 Para su correcta implementación y utilización de manera recurrente se ha pretendido poner el método de optencion de archivos en un componente para que al momento de llamarlo desde distintas paginas sea reutilizado solo llamando al componente creado.
@@ -110,11 +110,11 @@ Para poder implementar el metodo de manera satisfactoria procedemos a configurar
           
   ## file-chooser.component.html
  En este archivo html llamamos al método openChooser(), el cual tendrá la siguiente información:
-     <ion-button (click)="openChooser()">
-      <ion-icon [name]="icon"></ion-icon>
+             <ion-button (click)="openChooser()">
+              <ion-icon [name]="icon"></ion-icon>
 
-      Escoger Archivo
-    </ion-button>
+              Escoger Archivo
+            </ion-button>
 
 
 
@@ -125,19 +125,19 @@ Para la demostración de la implementación del componente con el plugin Chooser
 1) Implementar el componente dentro de la pagina.module.ts, en nuestro caso seria "crear-pagina.module.ts":
 Lo que hago en esta seccion es llamar al componente creado denominado FileChooserComponent y ademas declararlo como se puede observar a continuación en las presentes lineas de código:
 
-import {FileChooserComponent} from 'src/app/components/file-chooser/file-chooser.component';
-@NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    CrearEmpleoPageRoutingModule
-  ],
-  declarations: [CrearEmpleoPage, ImageUploadComponent, TestcomponentComponent,FileChooserComponent],
-  exports: [ImageUploadComponent, TestcomponentComponent,FileChooserComponent]
+    import {FileChooserComponent} from 'src/app/components/file-chooser/file-chooser.component';
+    @NgModule({
+      imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        CrearEmpleoPageRoutingModule
+      ],
+      declarations: [CrearEmpleoPage, ImageUploadComponent, TestcomponentComponent,FileChooserComponent],
+      exports: [ImageUploadComponent, TestcomponentComponent,FileChooserComponent]
 
-})
-export class CrearEmpleoPageModule {}
+    })
+    export class CrearEmpleoPageModule {}
 
 2) Llamar al componente en el html de la página:
 A continuación dentro del html de crear-empleo.page.html vamos a llamar a nuestro componente como muestra la siguiente linea de código:
