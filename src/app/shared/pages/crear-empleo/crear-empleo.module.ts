@@ -9,7 +9,7 @@ import { CrearEmpleoPageRoutingModule } from './crear-empleo-routing.module';
 import { CrearEmpleoPage } from './crear-empleo.page';
 import { ImageUploadComponent } from 'src/app/components/image-upload/image-upload.component';
 import { TestcomponentComponent } from 'src/app/componentes/testcomponent/testcomponent.component';
-
+import {FileChooserComponent} from 'src/app/components/file-chooser/file-chooser.component';
 
 @NgModule({
   imports: [
@@ -18,8 +18,8 @@ import { TestcomponentComponent } from 'src/app/componentes/testcomponent/testco
     IonicModule,
     CrearEmpleoPageRoutingModule
   ],
-  declarations: [CrearEmpleoPage, ImageUploadComponent, TestcomponentComponent],
-  exports: [ImageUploadComponent, TestcomponentComponent]
+  declarations: [CrearEmpleoPage, ImageUploadComponent, TestcomponentComponent,FileChooserComponent],
+  exports: [ImageUploadComponent, TestcomponentComponent,FileChooserComponent]
 
 })
 export class CrearEmpleoPageModule {}

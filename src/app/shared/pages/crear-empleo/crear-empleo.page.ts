@@ -3,7 +3,7 @@ import { Empleo } from '../../model/empleo';
 import { EmpleosService } from '../../services/empleos.service';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
-import {FileChooser} from '@ionic-native/file-chooser/ngx'
+
 import {FilePath  } from "@ionic-native/file-path/ngx";
 
 
@@ -18,7 +18,7 @@ export class CrearEmpleoPage implements OnInit {
   empleo: Empleo = new Empleo();
   base64Image: any;
   icono: string = 'camera'
-  currentFile: string = 'none';
+ 
   
   
 
@@ -26,8 +26,8 @@ export class CrearEmpleoPage implements OnInit {
   constructor(
     private empleoService: EmpleosService,
     private camera: Camera,
-    private fileChooser: FileChooser,
-    private filePath: FilePath,
+    
+    
   ) { }
 
   ngOnInit() {
@@ -64,32 +64,24 @@ export class CrearEmpleoPage implements OnInit {
     });
   }
 
+  archivoCargado(e){
+    console.log("archivoCargado");
+    console.log(JSON.stringify(e));
+    alert('Archivo Cargado');
+    this.empleo.file = e;
+  }
+
   imagenCargada(e) {
     console.log("imagenCargada");
     console.log(JSON.stringify(e));
     this.empleo.image = e;
+    
   }
 
   
-  openChooser(){
-    console.log('Opening chooser')
-    this.fileChooser.open().then(uri => {
-        console.log('File chosen: ', uri);
-        this.currentFile = uri;
-        alert('File is: ' + uri);
-      })
-      .catch(e => {
-        console.log('Error choosing file: ', e);
-      });
+  
 
-      
-  }
 
-  archivoSubido(e) {
-    console.log("imagenCargada");
-    console.log(JSON.stringify(e));
-    this.empleo.file = e;
-  }
   
     
 

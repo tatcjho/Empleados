@@ -16,7 +16,7 @@ import { environment } from 'src/environments/environment';
 import { Camera} from '@ionic-native/camera/ngx';
 
 import { FileChooser} from '@ionic-native/file-chooser/ngx'
-import {FilePath  } from "@ionic-native/file-path/ngx";
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,7 +35,7 @@ import {FilePath  } from "@ionic-native/file-path/ngx";
     SplashScreen,
     Camera,
     FileChooser,
-    FilePath,
+   
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
     
   ],
